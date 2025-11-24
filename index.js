@@ -15,11 +15,11 @@ const client = new MongoClient(uri, {
 
 // Initialize Express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // CORS middleware - allow requests from React app
 app.use(cors({
-  origin: 'http://localhost:5174', // React app origin
+  origin: '*', // React app origin
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
